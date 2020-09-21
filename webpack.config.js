@@ -1,6 +1,6 @@
-import path from 'path';
+var path =  require('path');
 
-export default {
+module.exports = {
   context: __dirname,
   entry: './frontend/entry.jsx',
   output: {
@@ -10,14 +10,14 @@ export default {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exlude: /(node_modules)/,
+        test: [/\.jsx?$/],
+        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           query: {
             presets: ['@babel/env', '@babel/react']
           }
-        }
+        },
       }
     ]
   },
