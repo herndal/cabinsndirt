@@ -33,36 +33,40 @@ class SessionForm extends React.Component {
   }
 
   names() {
-    return (
-      <>
-        <label>First name
-        <input type="text"
-        value={this.state.fname}
-        onChange={this.update("fname")}
-        className="login-input name"
-        />
-        </label>Last name
-        <input type="text"
-          value={this.state.lname}
-          onChange={this.update("lname")}
+    if (this.props.names) {
+      return (
+        <>
+          <label>First name
+          <input type="text"
+          value={this.state.fname}
+          onChange={this.update("fname")}
           className="login-input name"
-        />
-      </>
-    );
+          />
+          </label>Last name
+          <input type="text"
+            value={this.state.lname}
+            onChange={this.update("lname")}
+            className="login-input name"
+          />
+        </>
+      );
+    }
   }
 
   zip() {
-    return (
-      <div className="zip">
-        <label>Zip code
-          <input type="text"
-            value={this.state.zipcode}
-            onChange={this.update("zipcode")}
-            className="login-input"
-          />
-        </label>
-      </div>
-    )
+    if (this.props.names) {
+      return (
+        <div className="zip">
+          <label>Zip code
+            <input type="text"
+              value={this.state.zipcode}
+              onChange={this.update("zipcode")}
+              className="login-input"
+            />
+          </label>
+        </div>
+      )
+    }
   }
 
   errors() {
@@ -86,7 +90,7 @@ class SessionForm extends React.Component {
         <button className="session-form-button">{this.props.formButton}</button>
         <form onSubmit={this.handleSubmit} className="session-form">
           {this.errors()}
-          {if (this.props.names) names()}
+          {this.names()}
           <label>Email address
             <input type="text"
               value={this.state.email}
@@ -101,7 +105,7 @@ class SessionForm extends React.Component {
               className="login-input"
             />
           </label>
-          {if (this.props.name) zip()}
+          {this.zip()}
           <input className="session-submit" type="submit" value={this.props.formType} />
         </form>
         {this.props.navLinkMessage}{this.props.navLink}

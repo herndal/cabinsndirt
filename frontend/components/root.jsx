@@ -1,5 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
-export default () => (
-  <h1>This is Cabin's n Dirt, root component</h1>
-)
+import App from './app';
+
+export default ({ store }) => (
+  <Provider store={store}>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Provider>
+);
