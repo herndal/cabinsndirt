@@ -5,11 +5,6 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const APPLY_LOGIN_FORM = 'APPLY_LOGIN_FORM';
 export const APPLY_SIGNUP_FORM = 'APPLY_SIGNUP_FORM';
-export const CLEAR_ERRORS = 'CLEAR_ERRORS';
-
-export const clearErrors = () => ({
-  type: CLEAR_ERRORS
-});
 
 export const applyLoginForm = () => ({
   type: APPLY_LOGIN_FORM

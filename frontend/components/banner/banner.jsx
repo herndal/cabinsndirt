@@ -13,8 +13,8 @@ class Banner extends React.Component {
         <nav className="banner-nav">
           <Link to="/">Near me</Link>
           <Link to="/">About</Link>
-          <Link to="/login">Log in</Link>
-          <Link to="/signup">Sign up</Link>
+          <button onClick={() => this.props.openModal('login')}>Log In</button>
+          <button onClick={() => this.props.openModal('signup')}>Sign Up</button>
         </nav>
       </>
     )

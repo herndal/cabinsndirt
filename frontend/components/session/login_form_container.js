@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { login, clearErrors } from '../../actions/session_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
+import { login } from '../../actions/session_actions';
+import { clearErrors } from '../../actions/error_actions';
 import SessionForm from './session_form';
 
 const mSTP = ({ errors }) => {
@@ -13,14 +14,19 @@ const mSTP = ({ errors }) => {
     formHeader: 'Welcome back!',
     formSubHeader: 'Let\'s get you outside.',
     navLinkMessage: 'Don\'t have a Cabins \'n Dirt account?',
-    navLink: <Link to="/signup">Sign up!</Link>,
   };
 };
 
 const mDTP = dispatch => {
   return {
     action: (user) => dispatch(login(user)),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    closeModal: () => dispatch(closeModal()),
+    altSession: (
+      <button onClick={() => dispatch(openModal('signup'))}>
+        Sign up!
+      </button>
+    )
   };
 };
 

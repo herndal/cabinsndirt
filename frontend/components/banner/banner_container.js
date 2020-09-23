@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { openModal } from '../../actions/modal_actions';
 import Banner from './banner';
 
 const mSTP = state => {
@@ -6,9 +7,8 @@ const mSTP = state => {
   };
 };
 
-const mDTP = dispatch => {
-  return {
-  };
-};
+const mDTP = dispatch => ({
+  openModal: modal => dispatch(openModal(modal))
+});
 
 export default connect(mSTP, mDTP)(Banner);

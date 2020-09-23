@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { signup, clearErrors } from '../../actions/session_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
+import { signup } from '../../actions/session_actions';
+import { clearErrors } from '../../actions/error_actions';
 import SessionForm from './session_form';
 
 const mSTP = ({ errors }) => {
@@ -13,14 +14,19 @@ const mSTP = ({ errors }) => {
     formHeader: 'Join Hipcamp',
     formSubHeader: 'Discover the best camping near me',
     navLinkMessage: 'Have an account?',
-    navLink: <Link to="/login">Sign in</Link>,
   };
 };
 
 const mDTP = dispatch => {
   return {
     action: (user) => dispatch(signup(user)),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    closeModal: () => dispatch(closeModal()),
+    altSession: (
+      <button onClick={() => dispatch(openModal('login'))}>
+        Sign in
+      </button>
+    )
   };
 };
 

@@ -112,7 +112,7 @@ class SessionForm extends React.Component {
           {this.zip()}
           <input className="session-submit" type="submit" value={this.props.formType} />
         </form>
-        {this.props.navLinkMessage}{this.props.navLink}
+        {this.props.navLinkMessage}{this.props.altSession}
       </div>
     );
   }
