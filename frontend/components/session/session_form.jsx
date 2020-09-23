@@ -42,15 +42,17 @@ class SessionForm extends React.Component {
         <>
           <label>First name
           <input type="text"
-          value={this.state.fname}
-          onChange={this.update("fname")}
-          className="login-input name"
+            value={this.state.fname}
+            onChange={this.update("fname")}
+            className="login-input name"
+            placeholder="First name"
           />
           </label>Last name
           <input type="text"
             value={this.state.lname}
             onChange={this.update("lname")}
             className="login-input name"
+            placeholder="Last name"
           />
         </>
       );
@@ -66,6 +68,7 @@ class SessionForm extends React.Component {
               value={this.state.zipcode}
               onChange={this.update("zipcode")}
               className="login-input"
+              placeholder="Zip code"
             />
           </label>
         </div>
@@ -88,8 +91,11 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="session-modal">
-        <h2>{this.props.formHeader}</h2>
-        <p>{this.props.formSubHeader}</p>
+        <big className="session-form-header">{this.props.formHeader}
+          <small className="session-form-subheader">
+            {this.props.formSubHeader}
+          </small>
+        </big>
         <br />
         <button className="session-form-button">{this.props.formButton}</button>
         <form onSubmit={this.handleSubmit} className="session-form">
@@ -100,6 +106,7 @@ class SessionForm extends React.Component {
               value={this.state.email}
               onChange={this.update('email')}
               className="login-input"
+              placeholder="Email address"
             />
           </label>
           <label>{this.props.names ? "Create a password" : "Password"}
@@ -107,6 +114,7 @@ class SessionForm extends React.Component {
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input"
+              placeholder={ this.props.names ? "Create a password" : "Password"}
             />
           </label>
           {this.zip()}

@@ -1,0 +1,47 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: opacity 0.15s linear;
+}
+
+.modal-dialog {
+  width: 332px;
+  position: relative;
+  margin: 10px;
+  border: 1px solid $border-gray;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-out;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content {
+  padding: 15px;
+}
+
+.session-form-header {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+.session-form-subheader {
+  display: block;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: $body-text;
+}

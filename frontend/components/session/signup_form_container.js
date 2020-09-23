@@ -11,7 +11,7 @@ const mSTP = ({ errors }) => {
     errors: errors.session,
     formType: 'Join Cabins \'n Dirt',
     formButton: 'Sign up with your email address',
-    formHeader: 'Join Hipcamp',
+    formHeader: 'Join Cabins \'n Dirt',
     formSubHeader: 'Discover the best camping near me',
     navLinkMessage: 'Have an account?',
   };
