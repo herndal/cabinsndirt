@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
   before_action :require_logged_in, only: [:destroy]
   
   def create
@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       params[:user][:password]
     )
     if @user
-      login(user)
+      login(@user)
       render "api/users/show"
     else
       render json: ["Invalid credentials"], status: 401

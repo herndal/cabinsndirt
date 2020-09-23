@@ -3,7 +3,7 @@ import React from 'react';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    if (this.props.name) {
+    if (this.props.names) {
       this.state = {
         fname: '',
         lname: '',
