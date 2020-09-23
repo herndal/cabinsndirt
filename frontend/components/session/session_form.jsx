@@ -20,6 +20,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.target.value
@@ -92,7 +96,7 @@ class SessionForm extends React.Component {
           {this.errors()}
           {this.names()}
           <label>Email address
-            <input type="text"
+            <input type="email"
               value={this.state.email}
               onChange={this.update('email')}
               className="login-input"

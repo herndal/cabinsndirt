@@ -9,15 +9,14 @@ import {
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-import LoginFormContainer from '../components/session/login_form_container';
-import SignupFormContainer from '../components/session/signup_form_container';
+import LoginFormContainer from './session/login_form_container';
+import SignupFormContainer from './session/signup_form_container';
+import BannerContainer from './banner/banner_container';
 
 export default () => (
   <div>
     <header>
-      <Link to="/" className="header-link">
-        <h1>Cabins 'n Dirt</h1>
-      </Link>
+      <BannerContainer />
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
