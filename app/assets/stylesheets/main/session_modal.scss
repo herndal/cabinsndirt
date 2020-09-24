@@ -118,6 +118,10 @@
   color: #fff;
 }
 
+.session-form-button:hover, .session-submit:hover{
+  cursor: pointer;
+}
+
 .session-submit.signup {
   border-radius: 50px;
 }
