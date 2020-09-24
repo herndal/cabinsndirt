@@ -41,7 +41,6 @@
 .top-links a, .session-button {
   border-bottom: 2px solid;
   border-color: transparent;
-  transition: all 0.25s ease 0s;
   font-size: 1.7rem;
   font-weight: 350;
 }
@@ -58,7 +57,6 @@
   padding: 8px;
   font-weight: 500;
   background-color: $button-green;
-  transition: all 0.25s ease 0s;
 }
 
 .demo-button:hover {

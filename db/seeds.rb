@@ -17,4 +17,14 @@ demo = User.new(
   bio: 'demo user'
 )
 
+liza = User.new(
+  fname: 'liza',
+  lname: 'grishaeva',
+  password: 'lizaloo',
+  email: 'lizagris@she.daddy',
+  zipcode: '23220',
+  bio: 'a southern girl that loves hiking hates bugs with equal passion'
+)
+
 demo.save!
+liza.save!
