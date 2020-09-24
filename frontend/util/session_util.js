@@ -20,3 +20,8 @@ export const logout = () => (
     url: '/api/session'
   })
 );
+
+export const demoUser = {
+  email: 'don@don.don',
+  password: 'dondondon'
+};
