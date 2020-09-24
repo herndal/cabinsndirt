@@ -34,7 +34,7 @@ dd {
 }
 
 html {
-  font-size: 10px;
+  font-size: 9px;
   font-family: sans-serif;
 }
 
@@ -45,7 +45,7 @@ body {
   min-height: 100vh;
   height: 100%;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  // text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-weight: 400;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
@@ -83,6 +83,32 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+// hr {
+//   display: block;
+//   height: 1px;
+//   border: 0;
+//   border-top: 1px solid $border-gray;
+//   margin: 1em 0;
+//   padding: 0;
+// }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $logo-gray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $logo-gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $logo-gray;
+}
+
+:focus {
+  outline: none;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

@@ -10,7 +10,7 @@ const mSTP = ({ errors }) => {
     names: true,
     errors: errors.session,
     formType: 'Join Cabins \'n Dirt',
-    formButton: 'Sign up with your email address',
+    formButton: ' Sign up with your email address ',
     formHeader: 'Join Cabins \'n Dirt',
     formSubHeader: 'Discover the best camping near me',
     navLinkMessage: 'Have an account?',
@@ -23,10 +23,10 @@ const mDTP = dispatch => {
     clearErrors: () => dispatch(clearErrors()),
     closeModal: () => dispatch(closeModal()),
     altSession: (
-      <button onClick={() => dispatch(openModal('login'))}>
-        Sign in
-      </button>
-    )
+      <strong className="alt-session">
+        <button onClick={() => dispatch(openModal("login"))}>Sign in</button>
+      </strong>
+    ),
   };
 };
 

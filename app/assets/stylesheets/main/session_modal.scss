@@ -28,20 +28,137 @@
   transform: translate(-50%, -50%);
 }
 
-.modal-content {
+.modal-body {
   padding: 15px;
 }
 
 .session-form-header {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2.5rem;
 }
 
 .session-form-subheader {
   display: block;
-  font-weight: 400;
-  font-size: 1.8rem;
+  font-weight: 250;
+  font-size: 1.6rem;
   color: $body-text;
+}
+
+.session-input {
+  font-weight: 600;
+  border: 1px solid $logo-gray;
+  height: 68px;
+  font-size: 1.65rem;
+  display: block;
+  line-height: 1.42;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: $logo-gray;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fname {
+  margin-right: 10px;
+}
+
+.strike {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  margin: 20px 0;
+}
+
+.strike>span {
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+  color: $or-gray;
+}
+
+.strike>span:before, .strike>span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 999px;
+  height: 1px;
+  background-color: $border-gray;
+}
+
+.strike>span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.strike>span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.session-form-button, .session-submit {
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 16px 14px;
+  font-size: 1em;
+  background-color: $button-green;
+  border: 1px solid transparent;
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+.session-submit.signup {
+  border-radius: 50px;
+}
+
+.modal-footer {
+  background-color: $background-gray;
+  text-align: center;
+  padding: 15px;
+  font-weight: 350;
+  font-size: 14px;
+}
+
+.modal-footer:after {
+    clear: both;
+}
+
+.modal-footer:before, .modal-footer:after {
+    content: " ";
+    display: table;
+}
+
+.footer-message {
+  display: inline-block;
+}
+
+.alt-session {
+  padding-left: 4px;
+}
+
+.alt-session button{
+  display: inline-block;
+  appearance: none;
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid $border-gray;
+  transition: all 0.25s ease 0s;
+  padding: 0;
+  color: $logo-gray;
+}
+
+.alt-session button:hover {
+  cursor: pointer;
+  border-color: $logo-gray;
 }
