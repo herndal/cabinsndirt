@@ -149,13 +149,7 @@
 
 .alt-session button{
   display: inline-block;
-  appearance: none;
-  border: none;
-  background-color: inherit;
   border-bottom: 1px solid $border-gray;
-  transition: all 0.25s ease 0s;
-  padding: 0;
-  color: $logo-gray;
 }
 
 .alt-session button:hover {

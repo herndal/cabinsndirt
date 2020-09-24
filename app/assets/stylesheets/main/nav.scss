@@ -1,0 +1,68 @@
+.nav-banner {
+  position: fixed;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  min-height: 70px;
+  width: 100%;
+  min-width: 500px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.logo-link {
+  color: $logo-gray;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  height: 100%;
+}
+
+.top-links{
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  height: 100%;
+}
+
+.top-links a {
+  color: $logo-gray;
+}
+
+.session-button {
+  margin: 0 6px;
+}
+
+.top-links a, .session-button {
+  border-bottom: 2px solid;
+  border-color: transparent;
+  transition: all 0.25s ease 0s;
+  font-size: 1.7rem;
+  font-weight: 350;
+}
+
+.top-links a:hover, .session-button:hover {
+  border-color: $button-green;
+  cursor: pointer;
+}
+
+.demo-button {
+  color: #fff;
+  border-radius: 4px;
+  border: 3px solid $button-green;
+  padding: 8px;
+  font-weight: 500;
+  background-color: $button-green;
+  transition: all 0.25s ease 0s;
+}
+
+.demo-button:hover {
+  cursor: pointer;
+  color: $button-green;
+  background-color: #fff;
+}

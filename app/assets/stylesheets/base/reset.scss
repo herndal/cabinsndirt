@@ -85,6 +85,15 @@ select {
   font: inherit;
 }
 
+button {
+  appearance: none;
+  border: none;
+  background-color: inherit;
+  transition: all 0.25s ease 0s;
+  padding: 0;
+  color: $logo-gray;
+}
+
 // hr {
 //   display: block;
 //   height: 1px;
