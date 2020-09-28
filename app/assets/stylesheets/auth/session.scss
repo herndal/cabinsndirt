@@ -5,11 +5,10 @@
   right: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.8);
-  opacity: 1;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 100;
-  transition: all 0.15s linear;
+  z-index: 1000;
+  transition: opacity 0.15s linear;
   -webkit-transition: all 0.15s linear;
   -o-transition: all 0.15s linear;
 }
@@ -160,9 +159,9 @@
 }
 
 .alt-session a{
+  color: $logo-gray;
   display: inline-block;
   border-bottom: 1px solid $border-gray;
-  color: $logo-gray;
 }
 
 .alt-session a:hover {

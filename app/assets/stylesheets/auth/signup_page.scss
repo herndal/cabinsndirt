@@ -13,3 +13,7 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 100;
 }
+
+.modal-background.page .modal-footer{
+  display: none;
+}

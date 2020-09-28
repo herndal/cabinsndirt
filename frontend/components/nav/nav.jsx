@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Banner extends React.Component {
+class navBase extends React.Component {
 
   sessionNav(){
     if (!this.props.loggedIn) {
@@ -41,11 +41,11 @@ class Banner extends React.Component {
 
   render() {
     return (
-      <div className="nav-banner">
+      <div className="nav">
         <Link to="/" className="logo-link">
           <h1>Cabins 'n Dirt</h1>
         </Link>
-        <nav className="nav">
+        <nav className="nav-links">
           <li className="top-links">
             <Link to="/">Near me</Link>
           </li>
@@ -59,4 +59,12 @@ class Banner extends React.Component {
   }
 }
 
-export default Banner;
+// export const StickyNav = () => {
+//   return (
+//     <div className = "sticky-nav" >
+//         <navBase />
+//     </div >
+//   );
+// };
+
+export default navBase;
