@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-  // Route,
+  Route,
   // Redirect,
   Switch,
-  Link,
+  // Link,
   // HashRouter
 } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import LoginFormContainer from './session/login_form_container';
-import SignupFormContainer from './session/signup_form_container';
+import SignupBackgroundContainer from './session/signup_background_container';
 import Nav from './nav/nav_container';
 import Modal from './modal';
 
@@ -18,11 +18,11 @@ export default () => (
   <div>
     <Modal />
     <header>
-      <Nav />
+      <Switch>
+        <AuthRoute exact path="/signup" component={SignupBackgroundContainer} />
+        <Route path="/" component={Nav} />
+      </Switch>
     </header>
-    <Switch>
-      {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
-    </Switch>
+    <AuthRoute exact path="/login" component={LoginFormContainer} />
   </div>
 );

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { Link } from 'react-router-dom';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import { login } from '../../actions/session_actions';
 import { clearErrors } from '../../actions/error_actions';
 import SessionForm from './session_form';
@@ -24,7 +25,7 @@ const mDTP = dispatch => {
     closeModal: () => dispatch(closeModal()),
     altSession: (
       <strong className="alt-session">
-        <button onClick={() => dispatch(openModal("signup"))}>Sign up!</button>
+        <Link to="/signup">Sign up!</Link>
       </strong>
     ),
   };

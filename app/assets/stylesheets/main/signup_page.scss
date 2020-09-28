@@ -1,0 +1,15 @@
+.login-button{
+  z-index: 1000;
+  display: block;
+  float: right;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: $logo-gray;
+  font-size: 16px;
+}
+
+.modal-background.page{
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}

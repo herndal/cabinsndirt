@@ -8,6 +8,7 @@ class Modal extends React.Component {
   render() {
     if (!this.props.modal) return null;
     let component;
+    let page = false;
     switch (this.props.modal) {
       case 'login':
         component = <LoginFormContainer />;
@@ -15,14 +16,18 @@ class Modal extends React.Component {
       case 'signup':
         component = <SignupFormContainer />;
         break;
+      case 'signup-page':
+        component = <SignupFormContainer />;
+        page = true;
+        break;
       default:
         return null;
     }
     return (
-      <div className="modal-background"
-        onClick={this.props.closeModal}>
+      <div className={page ? "modal-background page": "modal-background"}
+        onClick={page ? null : this.props.closeModal}>
         <div className="modal-dialog"
-          onClick={e => e.stopPropagation()}>
+          onClick={page ? null : e => e.stopPropagation()}>
           <div className="modal-content">
             {component}
           </div>

@@ -28,3 +28,15 @@ liza = User.new(
 
 demo.save!
 liza.save!
+
+
+# Seeding attachments with AWS:
+# make the bucket public during seeding, and copy URLs for each file:
+
+# require 'open-uri'
+
+# demo_user = User.create(username: "Andy", email: "andy@email.com", password: "password")
+
+# file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
+
+# demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
