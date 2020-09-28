@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 class SignupBackground extends React.Component {
   componentDidMount() {
@@ -21,6 +21,7 @@ const mSTP = state => ({})
 const mDTP = (dispatch) => ({
   login: <Link to="/login"
     className='login-button'
+    onClick = {() => dispatch(closeModal())}
     >Log in</Link>,
   openModal: () => dispatch(openModal('signup-page'))
 });
