@@ -6,14 +6,16 @@ import {
   // Link,
   // HashRouter
 } from 'react-router-dom';
-
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { 
+  AuthRoute, 
+  ProtectedRoute 
+} from '../util/route_util';
+import Splash from './splash/splash';
 
 import Login from './session/login_page';
 import Signup from './session/signup_background_container';
 import StickyNav from './nav/nav_container';
 import Modal from './modal';
-import Splash from './splash/splash';
 
 export default () => (
   <div>

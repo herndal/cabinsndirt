@@ -1,5 +1,9 @@
-import { connect } from 'react-redux';
-import HomeSearch from './homesearch';
+import { 
+  connect 
+} from 'react-redux';
+import { 
+  HomeSearch 
+} from './search';
 
 const mSTP = state => ({
 
