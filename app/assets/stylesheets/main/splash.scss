@@ -1,8 +1,12 @@
 .splash {
-  padding: 10px;
+  padding: 15px;
   margin: 50px auto 0;
   max-width: 1060px;
 }
+
+
+
+//splash page header
 
 .splash-header .title {
   font-size: 4.5rem;
@@ -52,6 +56,16 @@
   flex-grow: 1;
 }
 
+.search-clear {
+  margin-right: 11px;
+  font-size: 1.6rem;
+  font-weight: 540;
+}
+
+.search-clear:hover {
+  cursor: pointer;
+}
+
 .search-row.row-2>.date-range {
   height: 65px;
   padding: 9px 7px;
@@ -84,4 +98,41 @@
   border-radius: 2px;
   flex-grow: 2;
   font-size: 16px;
+}
+
+
+
+//splash page body
+
+.campaign {
+  margin: 100px auto 0;
+  padding: 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px;
+  width: auto;
+}
+
+.campaign .header {
+  width: 364px;
+  height: 364px;
+  background-color: #333333;
+  padding: 26px;
+  color: #fff;
+}
+
+.campaign .title {
+  font-size: 3.3rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 17px;
+}
+
+.campaign .subtext {
+  font-size: 1.7rem;
+  line-height: 1.7;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 20px;
 }

@@ -12,7 +12,7 @@ export default () => {
     <div className="search-box-container">
       <div className="search-row row-1">
         <SearchBox searchText={searchText} setSearchText={setSearchText} />
-        <button onClick={() => setSearchText("")}>Clear</button>
+        <button className="search-clear" onClick={() => setSearchText("")}>Clear</button>
       </div>
       <div className="search-row row-2">
         <DateRange />

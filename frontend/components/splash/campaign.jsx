@@ -1,9 +1,19 @@
 import React from 'react';
+import Header from '../shared/header';
+import WhiteButton from '../shared/white_button';
 
-export default () => {
+export default (props) => {
   return (
-    <div>
-      <h1>Campaign</h1>
+    <div
+      className="campaign"
+      style={props.style}
+      >
+      <Header
+      title={props.title}
+      subtext={props.subtext}
+      >
+        <WhiteButton />
+      </Header>
     </div>
   )
 }
