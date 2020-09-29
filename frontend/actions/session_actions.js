@@ -1,51 +1,57 @@
-import * as APIUtil from '../util/session_util';
+import * as APIUtil from '../util/api_util'
+import {
+  receiveSessionErrors
+} from './error_actions'
 
-export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
-export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
-export const APPLY_LOGIN_FORM = 'APPLY_LOGIN_FORM';
-export const APPLY_SIGNUP_FORM = 'APPLY_SIGNUP_FORM';
+export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER'
+export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER'
+export const APPLY_LOGIN_FORM = 'APPLY_LOGIN_FORM'
+export const APPLY_SIGNUP_FORM = 'APPLY_SIGNUP_FORM'
 
 export const applyLoginForm = () => ({
   type: APPLY_LOGIN_FORM
-});
+})
 
 export const applySignupForm = () => ({
   type: APPLY_SIGNUP_FORM
-});
+})
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
   currentUser
-});
+})
 
 export const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER,
-});
-
-export const receiveErrors = errors => ({
-  type: RECEIVE_SESSION_ERRORS,
-  errors
-});
+})
 
 export const signup = user => dispatch => (
-  APIUtil.signup(user).then(theUser => (
-    dispatch(receiveCurrentUser(theUser))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
-  ))
-);
+  APIUtil.signup(user)
+  .then(
+    theUser => (
+      dispatch(receiveCurrentUser(theUser))
+    ), err => (
+      dispatch(receiveSessionErrors(err.responseJSON))
+    )
+  )
+)
 
 export const login = user => dispatch => (
-  APIUtil.login(user).then(theUser => (
-    dispatch(receiveCurrentUser(theUser))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
-  ))
-);
+  APIUtil.login(user)
+  .then(
+    theUser => (
+      dispatch(receiveCurrentUser(theUser))
+    ), err => (
+      dispatch(receiveSessionErrors(err.responseJSON))
+    )
+  )
+)
 
 export const logout = () => dispatch => (
-  APIUtil.logout().then(user => (
-    dispatch(logoutCurrentUser())
-  ))
-);
+  APIUtil.logout()
+  .then(
+    user => (
+      dispatch(logoutCurrentUser())
+    )
+  )
+)

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_actions';
 import { login, logout } from '../../actions/session_actions';
-import { demoUser } from '../../util/session_util';
+import { demoUser } from '../../util/api_util';
 import Nav from './nav';
 
 const mSTP = (state) => ({

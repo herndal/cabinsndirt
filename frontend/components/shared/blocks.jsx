@@ -17,7 +17,7 @@ export const Header = (props) => (
       {props.headerChildren}
     </div>
     <div 
-    className={`${props.className}-body`}body>
+    className={`${props.className}-body`}>
       {props.children}
     </div>
   </div>

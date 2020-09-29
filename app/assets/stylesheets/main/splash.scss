@@ -148,7 +148,12 @@
   margin-bottom: 32px;
 }
 
+.adventure-row-body {
+  height: 635px;
+}
+
 .tiles-row {
+  height: 100%;
   display: flex;
   -webkit-flex-flow: row;
   flex-flow: row;
@@ -168,7 +173,7 @@
 .adventure-tile {
   margin-left: 16px;
   margin-bottom: 16px;
-  height: 635px;
+  height: 100%;
   max-width: calc(100vw - 24px);
   display: -webkit-flex;
   display: flex;
