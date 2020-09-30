@@ -1,5 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { 
+  Link 
+} from 'react-router-dom'
 
 class navBase extends React.Component {
 
@@ -41,7 +43,7 @@ class navBase extends React.Component {
 
   render() {
     return (
-      <div className="nav">
+      <div className={`nav ${this.props.className}`}>
         <Link to="/" className="logo-link">
           <h1>Cabins 'n Dirt</h1>
         </Link>
@@ -67,4 +69,4 @@ class navBase extends React.Component {
 //   );
 // };
 
-export default navBase;
+export default navBase

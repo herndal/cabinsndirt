@@ -1,17 +1,20 @@
 import React, { 
   useState 
-} from 'react';
+} from 'react'
+import {
+  Link
+} from 'react-router-dom'
 import {
   FontAwesomeIcon
-} from "@fortawesome/react-fontawesome";
+} from "@fortawesome/react-fontawesome"
 import {
   faSearch
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
 import {
   SelectSingleCampType,
   DateRange,
   GreenButton
-} from '../shared/inputs';
+} from '../shared/inputs'
 
 // from search box focus, on enter key press: add clear button to search box, and bring focus to next element (calendar)
 export const HomeSearch = () => {
@@ -26,10 +29,12 @@ export const HomeSearch = () => {
       <div className="search-row row-2">
         <DateRange />
         <SelectSingleCampType />
-        <GreenButton text="Search" />
+        <Link to="/discover" className="discover-link">
+          <GreenButton text="Search" />
+        </Link>
       </div>
     </div>
-  );
+  )
 }
 
 export const SearchBox = ({ searchText, setSearchText }) => {
@@ -44,5 +49,5 @@ export const SearchBox = ({ searchText, setSearchText }) => {
         onChange={e => setSearchText(e.target.value)}
       />
     </div>
-  );
+  )
 }

@@ -20,23 +20,19 @@ export const receiveLocation = location => ({
 })
 
 export const getLocations = () => dispatch => (
-  dispatch(fetchLocations())
-  .then(
-    locs => (
+  fetchLocations())
+  .then( locs => (
       dispatch(receiveLocations(locs))
     ), err => (
       dispatch(receiveLocationErrors(err.responseJSON))
     )
-  )
 )
 
 export const getLocation = id => dispatch => (
-  dispatch(fetchLocation(id))
-  .then(
-    loc => (
+  fetchLocation(id))
+  .then( loc => (
       dispatch(receiveLocation(loc))
     ), err => (
       dispatch(receiveLocationErrors(err.responseJSON))
     )
-  )
 )
