@@ -53,3 +53,31 @@
 .textfield::placeholder {
   color: $body-text;
 }
+
+.footer {
+  border-top: 1px solid $border-gray;
+  color: $body-text;
+  font-size: 1.6rem;
+  font-weight: 300;
+  display: flex;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  justify-content: space-between;
+}
+
+.footer-icons {
+  display: flex;
+}
+
+.footer-icons li {
+  height: 20px;
+  width: 20px;
+  margin: 0 15px;
+  opacity: 0.5;
+}
+
+.footer-icons a {
+  color: #000;
+}

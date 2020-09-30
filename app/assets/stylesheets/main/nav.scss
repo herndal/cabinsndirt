@@ -14,10 +14,19 @@
 .sticky-nav {
   position: sticky;
   top: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo-link {
+  margin-left: 15px;
+  height: 65px;
+  width: 220px;
   color: $logo-gray;
+  background-image: image_url("cabins_logo.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .nav-links {
