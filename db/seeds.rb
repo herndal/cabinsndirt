@@ -30,6 +30,36 @@ demo.save!
 liza.save!
 
 
+Location.destroy_all
+
+require 'open-uri'
+
+bryan = Location.new(
+  description: "Spacious park with fields",
+  address: "4308 Hermitage Rd, Richmond, VA 23227",
+  types: "camping",
+  longitude: -77.474441,
+  latitude: 37.592800,
+  price: 0,
+  capacity: 50
+)
+
+bryan1 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_1.jpg")
+bryan2 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_2.jpg")
+bryan3 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_3.jpg")
+bryan4 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_4.jpg")
+bryan6 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_6.jpg")
+bryan7 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_7.jpg")
+
+bryan.photos.attach(io: bryan1, filename: 'bryan_park_1.jpg')
+bryan.photos.attach(io: bryan2, filename: 'bryan_park_2.jpg')
+bryan.photos.attach(io: bryan3, filename: 'bryan_park_3.jpg')
+bryan.photos.attach(io: bryan4, filename: 'bryan_park_4.jpg')
+bryan.photos.attach(io: bryan6, filename: 'bryan_park_6.jpg')
+bryan.photos.attach(io: bryan7, filename: 'bryan_park_7.jpg')
+
+bryan.save!
+
 # Seeding attachments with AWS:
 # make the bucket public during seeding, and copy URLs for each file:
 

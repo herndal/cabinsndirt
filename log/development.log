@@ -6476,3 +6476,701 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 128ms (Views: 124.0ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4234388028315092655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLocation (20200929144252)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4234388028315092655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4234388028315092655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLocation (20200929144252)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "description" text, "address" character varying NOT NULL, "types" character varying NOT NULL, "longitude" float NOT NULL, "latitude" float NOT NULL, "price" float NOT NULL, "capacity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200929144252_create_location.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_address" ON "locations"  ("address")[0m
+  ↳ db/migrate/20200929144252_create_location.rb:13
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_longitude" ON "locations"  ("longitude")[0m
+  ↳ db/migrate/20200929144252_create_location.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_latitude" ON "locations"  ("latitude")[0m
+  ↳ db/migrate/20200929144252_create_location.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_price" ON "locations"  ("price")[0m
+  ↳ db/migrate/20200929144252_create_location.rb:16
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_capacity" ON "locations"  ("capacity")[0m
+  ↳ db/migrate/20200929144252_create_location.rb:17
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200929144252"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4234388028315092655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4234388028315092655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4234388028315092655)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/donaldherndon/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1V7ABacE0OcZcpnTQ_Qvqg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CljM0ZA3rzeV8gKx1GzPKA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "1V7ABacE0OcZcpnTQ_Qvqg"], ["password_digest", "$2a$12$28M9Cb75ZZOD92h.8kkSpO8k5AEDe9SIA9jXbug0vwdEbcBOMrg3S"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 18:01:24.053415"], ["updated_at", "2020-09-29 18:01:24.053415"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "CljM0ZA3rzeV8gKx1GzPKA"], ["password_digest", "$2a$12$mTgD7pEBARWsvLkXlvmIk.QzncR.9EndDhCjYeVFncUHdrVoZZOFq"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 18:01:24.057637"], ["updated_at", "2020-09-29 18:01:24.057637"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (6.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "GVAPSBfzcTNoJMC_cPG2uQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "A_BbZLdG_soWwQ6ZSPiPqw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "GVAPSBfzcTNoJMC_cPG2uQ"], ["password_digest", "$2a$12$YHIaSKHkobcU4Eb5bfoVseJ4u1ktAilgoP9Wof766Wf0FymQXcSu."], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 18:02:36.354170"], ["updated_at", "2020-09-29 18:02:36.354170"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "A_BbZLdG_soWwQ6ZSPiPqw"], ["password_digest", "$2a$12$XB3FtfyCEIkoMyRW3sMQ7Ofu5NzcQ0TAJ06PXOkCg3MppuoYZzpeC"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 18:02:36.357069"], ["updated_at", "2020-09-29 18:02:36.357069"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tnsC0mgFYdyJtzw_YZIOuQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "PZ8W2AAPrhlPElu3rJJ1NQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "tnsC0mgFYdyJtzw_YZIOuQ"], ["password_digest", "$2a$12$ovc.rh9ImL22QEzbuiaZuO87w0pUnXMy/DeIsDkx93DVL3T3KuBRS"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 18:04:51.997622"], ["updated_at", "2020-09-29 18:04:51.997622"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "PZ8W2AAPrhlPElu3rJJ1NQ"], ["password_digest", "$2a$12$GZs5QUlPBXD8xpi8mK/mDeofcILHAIxtPWcCtwgsQiggoK8zzpNCu"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 18:04:52.000330"], ["updated_at", "2020-09-29 18:04:52.000330"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8Cd0bNxykHDGDD1nuirbpw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3pttxWo1lpkQg2J-hnXbeQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "8Cd0bNxykHDGDD1nuirbpw"], ["password_digest", "$2a$12$CrA3G9E8h8YPNRAfK6tHo..BeWGK.OGxSyURx7fV7KRlNH3j9fkKK"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:01:29.444143"], ["updated_at", "2020-09-29 20:01:29.444143"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "3pttxWo1lpkQg2J-hnXbeQ"], ["password_digest", "$2a$12$mpmGmH/nu0SWhMWOAsoo0OW3S/PnUePhhnTjLinWWajLVA9XsAIgS"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:01:29.447127"], ["updated_at", "2020-09-29 20:01:29.447127"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LrIs3e3bb1f0WCbdkTz3NQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Spi3cbm1Pec8NQp0LRoZuA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "LrIs3e3bb1f0WCbdkTz3NQ"], ["password_digest", "$2a$12$6TT1uHGylLzdez1TPE5b6O8c9paTRCqCK84V9iQ7U9teXCnsdWnBC"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:03:09.249552"], ["updated_at", "2020-09-29 20:03:09.249552"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "Spi3cbm1Pec8NQp0LRoZuA"], ["password_digest", "$2a$12$0zh2C0HCXVTROeH2vLbSXe35.m5jPb0xgKMHXtv6.GMBYiQ3MtqpS"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:03:09.252458"], ["updated_at", "2020-09-29 20:03:09.252458"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7Zr7Q2FWM-8ruoLIMZxN5Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dBne_JGfO2E8732l7KW-sw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "7Zr7Q2FWM-8ruoLIMZxN5Q"], ["password_digest", "$2a$12$4c/SXhgGb/eqty99wRM3Lu4zGyMQh0jNJ6XG1ALs/wQ42.ghjm6v6"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:04:11.714940"], ["updated_at", "2020-09-29 20:04:11.714940"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "dBne_JGfO2E8732l7KW-sw"], ["password_digest", "$2a$12$W8yvQtqHEqOofBwNEGSi0ubj6dPvyeug7FjnvxoyDAUTGff8kpGhi"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:04:11.718184"], ["updated_at", "2020-09-29 20:04:11.718184"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "o5yDH9olQT4tvdHWCKIKPQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dXfTzHZd6tLkHu_09hmVVg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "o5yDH9olQT4tvdHWCKIKPQ"], ["password_digest", "$2a$12$epHk2HjNVXTDPBwWbOsR3.uJDyUY5jooKE8AshJEQwmFoE3tIZ12."], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:05:00.551114"], ["updated_at", "2020-09-29 20:05:00.551114"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "dXfTzHZd6tLkHu_09hmVVg"], ["password_digest", "$2a$12$e05D7fjrvjjCWxOEohZBpeQLqLhnFn840DaOmNx4ZNibRv9pGkfES"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:05:00.554089"], ["updated_at", "2020-09-29 20:05:00.554089"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "f4zTXb-Pn5ae_QNK5CORZg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vTCw69jccboDbT8Kmvt4Jg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "f4zTXb-Pn5ae_QNK5CORZg"], ["password_digest", "$2a$12$HmqD4h3.9OWyJpJ.X4VtueQ7/ZMw9.QxxxRQKAqQ4lL0XthR.BdcC"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:07:24.675724"], ["updated_at", "2020-09-29 20:07:24.675724"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "vTCw69jccboDbT8Kmvt4Jg"], ["password_digest", "$2a$12$4uWFrluZPexj29qbRr0SiuH1Qe0vvWJd0Dd1lL11rIFg/7WwMzrAO"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:07:24.678858"], ["updated_at", "2020-09-29 20:07:24.678858"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8PI_SdbF2iXqC9uauJvrhA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dhSJBVQutb-6Q1KIPnijFA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "8PI_SdbF2iXqC9uauJvrhA"], ["password_digest", "$2a$12$AcMHIEVIQGt.1ztKQKdrvuK8ibDrzZuthCbxOZ3v15E3wAVD4mJki"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:08:20.181037"], ["updated_at", "2020-09-29 20:08:20.181037"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "dhSJBVQutb-6Q1KIPnijFA"], ["password_digest", "$2a$12$ROXmVxJJ7LeDQH6TgApgSeXApIPJG.KUbfKqe6eFGM7gAPfN/cloW"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:08:20.184229"], ["updated_at", "2020-09-29 20:08:20.184229"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FfpWuNiM5-13HA3tXGvMwg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6TJuRKGsMXED9Jor6WrjkQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "FfpWuNiM5-13HA3tXGvMwg"], ["password_digest", "$2a$12$udW7DP2fUiJ60k9JiD8jOeh26VC3A0S1nTpopqYOoqrsQShIzrOsu"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:11:24.063710"], ["updated_at", "2020-09-29 20:11:24.063710"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "6TJuRKGsMXED9Jor6WrjkQ"], ["password_digest", "$2a$12$jY9QxppFonJzKTuIJtDWIOa90B.sOl2XGOko8PAgmG.NvVEmAt.F."], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:11:24.066689"], ["updated_at", "2020-09-29 20:11:24.066689"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "m9n5k03-KiIGTBn_asP1vA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "pz64VeVz9t_ZA_d_sphvnQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "m9n5k03-KiIGTBn_asP1vA"], ["password_digest", "$2a$12$xkbRSLue8tnNgs7jYUXYbO4vI8yAWR4jcriorlKTQN59bqW6ywO2S"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:13:08.040966"], ["updated_at", "2020-09-29 20:13:08.040966"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "pz64VeVz9t_ZA_d_sphvnQ"], ["password_digest", "$2a$12$NNOG6G3NXa3SYJ3Vf7MoXO3eu5fleirIYRKaE9P3vNVhETC5uKZ4i"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:13:08.043866"], ["updated_at", "2020-09-29 20:13:08.043866"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "EwPi8g2GuHQWJtALUbAelA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "6-8w5YA2wOiIH5bZnC8s6A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:55
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "don@don.don"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "don@don.don"], ["session_token", "EwPi8g2GuHQWJtALUbAelA"], ["password_digest", "$2a$12$kprErTL8n.yze0W5v/C4y.C5AENalilal6X.ntmQ6L7.CCHWuGlkO"], ["fname", "jimmy"], ["lname", "trees"], ["zipcode", "99723"], ["bio", "demo user"], ["created_at", "2020-09-29 20:15:18.990074"], ["updated_at", "2020-09-29 20:15:18.990074"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizagris@she.daddy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "session_token", "password_digest", "fname", "lname", "zipcode", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "lizagris@she.daddy"], ["session_token", "6-8w5YA2wOiIH5bZnC8s6A"], ["password_digest", "$2a$12$JPD3MCO4KxTqbBOeoVan/eQsR4Wnpbh66V4wZ6I5w1sYhEg1rD.DW"], ["fname", "liza"], ["lname", "grishaeva"], ["zipcode", "23220"], ["bio", "a southern girl that loves hiking hates bugs with equal passion"], ["created_at", "2020-09-29 20:15:18.992823"], ["updated_at", "2020-09-29 20:15:18.992823"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ db/seeds.rb:33
+[36m  S3 Storage (737.0ms) [0m[32mUploaded file to key: 3JQ6NC4xMj4ve4vAJ7icNnmT (checksum: yco/1UGnD3zIDWdifZymJw==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mActiveStorage::Blob Create (3.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "3JQ6NC4xMj4ve4vAJ7icNnmT"], ["filename", "bryan_park_1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 824579], ["checksum", "yco/1UGnD3zIDWdifZymJw=="], ["created_at", "2020-09-29 20:15:21.324683"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+[36m  S3 Storage (284.5ms) [0m[32mUploaded file to key: c3nyu4JHCCuxsHeoAAspPm6w (checksum: a6kNr25wWzb91t4xP82jZA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "c3nyu4JHCCuxsHeoAAspPm6w"], ["filename", "bryan_park_2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 462535], ["checksum", "a6kNr25wWzb91t4xP82jZA=="], ["created_at", "2020-09-29 20:15:21.634422"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+[36m  S3 Storage (78.2ms) [0m[32mUploaded file to key: 7bRLFiTsmdJp55BKyGf2FQ4W (checksum: 3XS8/86UT0QORv9WmsRcEA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "7bRLFiTsmdJp55BKyGf2FQ4W"], ["filename", "bryan_park_3.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 61831], ["checksum", "3XS8/86UT0QORv9WmsRcEA=="], ["created_at", "2020-09-29 20:15:21.716543"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+[36m  S3 Storage (94.6ms) [0m[32mUploaded file to key: DZLC7yg6Jgefgo45Pk1tirjt (checksum: eYgF0/8ikcgYE0uKNDCjEQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "DZLC7yg6Jgefgo45Pk1tirjt"], ["filename", "bryan_park_4.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 123709], ["checksum", "eYgF0/8ikcgYE0uKNDCjEQ=="], ["created_at", "2020-09-29 20:15:21.814963"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+[36m  S3 Storage (67.6ms) [0m[32mUploaded file to key: yU46FB6hbUYZM1MdTrjNBPz9 (checksum: LQ1+ut8PinsdmMCyUgsIZQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "yU46FB6hbUYZM1MdTrjNBPz9"], ["filename", "bryan_park_5.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 12394], ["checksum", "LQ1+ut8PinsdmMCyUgsIZQ=="], ["created_at", "2020-09-29 20:15:21.886735"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+[36m  S3 Storage (208.1ms) [0m[32mUploaded file to key: VkpLaQZng7LGDkzj11v21yzQ (checksum: 8Rk8OC8YNUEyxH1l/aSDng==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "VkpLaQZng7LGDkzj11v21yzQ"], ["filename", "bryan_park_6.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 47451], ["checksum", "8Rk8OC8YNUEyxH1l/aSDng=="], ["created_at", "2020-09-29 20:15:22.099895"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+[36m  S3 Storage (120.2ms) [0m[32mUploaded file to key: DQ66weubYARaoUAcQhtknGkD (checksum: HMV6802yaPvEN6P8hw6EPg==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "DQ66weubYARaoUAcQhtknGkD"], ["filename", "bryan_park_7.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 109349], ["checksum", "HMV6802yaPvEN6P8hw6EPg=="], ["created_at", "2020-09-29 20:15:22.224205"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mLocation Create (2.9ms)[0m  [1m[32mINSERT INTO "locations" ("description", "address", "types", "longitude", "latitude", "price", "capacity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["description", "Spacious park with fields"], ["address", "4308 Hermitage Rd, Richmond, VA 23227"], ["types", "camping"], ["longitude", -77.474441], ["latitude", 37.5928], ["price", 0.0], ["capacity", 50], ["created_at", "2020-09-29 20:15:22.230524"], ["updated_at", "2020-09-29 20:15:22.230524"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (10.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-09-29 20:15:22.235024"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 2], ["created_at", "2020-09-29 20:15:22.247013"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 3], ["created_at", "2020-09-29 20:15:22.249017"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 4], ["created_at", "2020-09-29 20:15:22.250572"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 5], ["created_at", "2020-09-29 20:15:22.251746"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 6], ["created_at", "2020-09-29 20:15:22.252760"]]
+  ↳ db/seeds.rb:63
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Location"], ["record_id", 1], ["blob_id", 7], ["created_at", "2020-09-29 20:15:22.253861"]]
+  ↳ db/seeds.rb:63
+  [1m[36mLocation Update (0.4ms)[0m  [1m[33mUPDATE "locations" SET "updated_at" = $1 WHERE "locations"."id" = $2[0m  [["updated_at", "2020-09-29 20:15:22.254913"], ["id", 1]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd] Performing ActiveStorage::AnalyzeJob (Job ID: 7ad82a7f-8d73-4d60-8054-7eae6e4161cd) from Inline(default) with arguments: #<GlobalID:0x00007feeb20d5a90 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd] [36m  S3 Storage (1023.4ms) [0m[34mDownloaded file from key: 3JQ6NC4xMj4ve4vAJ7icNnmT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ad82a7f-8d73-4d60-8054-7eae6e4161cd] Performed ActiveStorage::AnalyzeJob (Job ID: 7ad82a7f-8d73-4d60-8054-7eae6e4161cd) from Inline(default) in 1042.68ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7ad82a7f-8d73-4d60-8054-7eae6e4161cd) to Inline(default) with arguments: #<GlobalID:0x00007feeb242a380 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/1>>
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5] Performing ActiveStorage::AnalyzeJob (Job ID: 06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5) from Inline(default) with arguments: #<GlobalID:0x00007feeab693218 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5] [36m  S3 Storage (441.4ms) [0m[34mDownloaded file from key: c3nyu4JHCCuxsHeoAAspPm6w[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5] Performed ActiveStorage::AnalyzeJob (Job ID: 06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5) from Inline(default) in 451.32ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 06f184f1-fe1a-4d72-91a9-c7a2ceaaf7b5) to Inline(default) with arguments: #<GlobalID:0x00007feeab709580 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/2>>
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5] Performing ActiveStorage::AnalyzeJob (Job ID: d99aa212-b75c-4d13-9194-eff467ed87f5) from Inline(default) with arguments: #<GlobalID:0x00007feead21a7c0 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5] [36m  S3 Storage (99.5ms) [0m[34mDownloaded file from key: 7bRLFiTsmdJp55BKyGf2FQ4W[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d99aa212-b75c-4d13-9194-eff467ed87f5] Performed ActiveStorage::AnalyzeJob (Job ID: d99aa212-b75c-4d13-9194-eff467ed87f5) from Inline(default) in 109.7ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d99aa212-b75c-4d13-9194-eff467ed87f5) to Inline(default) with arguments: #<GlobalID:0x00007feead2ba108 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/3>>
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f] Performing ActiveStorage::AnalyzeJob (Job ID: 86ca129c-40ec-4f09-be1d-7ab8b23a3b5f) from Inline(default) with arguments: #<GlobalID:0x00007feeb5071330 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f] [36m  S3 Storage (143.4ms) [0m[34mDownloaded file from key: DZLC7yg6Jgefgo45Pk1tirjt[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [86ca129c-40ec-4f09-be1d-7ab8b23a3b5f] Performed ActiveStorage::AnalyzeJob (Job ID: 86ca129c-40ec-4f09-be1d-7ab8b23a3b5f) from Inline(default) in 164.44ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 86ca129c-40ec-4f09-be1d-7ab8b23a3b5f) to Inline(default) with arguments: #<GlobalID:0x00007feeb51a52b0 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/4>>
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10] Performing ActiveStorage::AnalyzeJob (Job ID: d97827a3-3854-4568-ad2e-66b528f2ca10) from Inline(default) with arguments: #<GlobalID:0x00007feeb5834fb8 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10] [36m  S3 Storage (69.3ms) [0m[34mDownloaded file from key: yU46FB6hbUYZM1MdTrjNBPz9[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d97827a3-3854-4568-ad2e-66b528f2ca10] Performed ActiveStorage::AnalyzeJob (Job ID: d97827a3-3854-4568-ad2e-66b528f2ca10) from Inline(default) in 76.55ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d97827a3-3854-4568-ad2e-66b528f2ca10) to Inline(default) with arguments: #<GlobalID:0x00007feead378a40 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/5>>
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c] Performing ActiveStorage::AnalyzeJob (Job ID: c62e1655-8d9f-4046-8b3b-44e0b5d6775c) from Inline(default) with arguments: #<GlobalID:0x00007feeb2791a78 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c] [36m  S3 Storage (115.5ms) [0m[34mDownloaded file from key: VkpLaQZng7LGDkzj11v21yzQ[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 6]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c62e1655-8d9f-4046-8b3b-44e0b5d6775c] Performed ActiveStorage::AnalyzeJob (Job ID: c62e1655-8d9f-4046-8b3b-44e0b5d6775c) from Inline(default) in 125.65ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c62e1655-8d9f-4046-8b3b-44e0b5d6775c) to Inline(default) with arguments: #<GlobalID:0x00007feeb2605970 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/6>>
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a] Performing ActiveStorage::AnalyzeJob (Job ID: 8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a) from Inline(default) with arguments: #<GlobalID:0x00007feeb25efe68 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/7>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a] [36m  S3 Storage (141.7ms) [0m[34mDownloaded file from key: DQ66weubYARaoUAcQhtknGkD[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 7]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a]   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a]   ↳ db/seeds.rb:63
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a] Performed ActiveStorage::AnalyzeJob (Job ID: 8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a) from Inline(default) in 151.87ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8b65b1bc-cb13-4217-8ccd-b2c88e1fdd3a) to Inline(default) with arguments: #<GlobalID:0x00007feeac546468 @uri=#<URI::GID gid://cabins-n-dirt/ActiveStorage::Blob/7>>
+  [1m[36mLocation Load (2.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Location"], ["name", "photos"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 1], ["record_type", "Location"], ["name", "photos"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 1], ["record_type", "Location"], ["name", "photos"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 1], ["record_type", "Location"], ["name", "photos"], ["LIMIT", 1]]

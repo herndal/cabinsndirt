@@ -4,9 +4,9 @@ import {
 } from 'react-redux';
 import { 
   closeModal 
-} from '../actions/modal_actions';
-import LoginFormContainer from './session/login_form_container';
-import SignupFormContainer from './session/signup_form_container';
+} from '../../actions/modal_actions';
+import LoginFormContainer from '../session/login_form_container';
+import SignupFormContainer from '../session/signup_form_container';
 
 class Modal extends React.Component {
   render() {
@@ -45,12 +45,12 @@ const mSTP = state => {
   return {
     modal: state.ui.modal
   };
-};
+}
 
 const mDTP = dispatch => {
   return {
     closeModal: () => dispatch(closeModal())
   };
-};
+}
 
-export default connect(mSTP, mDTP)(Modal);
+export default connect(mSTP, mDTP)(Modal)

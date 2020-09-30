@@ -1,13 +1,11 @@
 import React from 'react';
+import HomeSearch from "../search/homesearch_container";
 import {
   Header 
 }from '../shared/blocks';
 import {
   WhiteButton 
 } from '../shared/inputs';
-import { 
-  HomeSearch 
-} from "../search/search";
 import { 
   imgStyle 
 } from '../shared/helper';

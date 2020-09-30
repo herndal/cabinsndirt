@@ -1,9 +1,10 @@
 import {
-  RECEIVE_CURRENT_USER
-} from '../../actions/session_actions'
-import { 
-  RECEIVE_SESSION_ERRORS,
-  CLEAR_ERRORS 
+  RECEIVE_LOCATIONS,
+  RECEIVE_LOCATION
+} from '../../actions/location_actions'
+import {
+  RECEIVE_LOCATION_ERRORS,
+  CLEAR_ERRORS
 } from '../../actions/error_actions'
 
 export default (state = [], action) => {
@@ -11,9 +12,11 @@ export default (state = [], action) => {
   switch (action.type) {
     case CLEAR_ERRORS:
       return [];
-    case RECEIVE_SESSION_ERRORS:
+    case RECEIVE_LOCATION_ERRORS:
       return action.errors;
-    case RECEIVE_CURRENT_USER:
+    case RECEIVE_LOCATIONS:
+      return [];
+    case RECEIVE_LOCATION:
       return [];
     default:
       return state;
