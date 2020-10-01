@@ -1,11 +1,4 @@
 import React from 'react'
-import {
-  FontAwesomeIcon
-} from "@fortawesome/react-fontawesome"
-import {
-  faGraduationCap
-} from "@fortawesome/free-solid-svg-icons"
-
 
 export default () => (
   <div className="footer">
@@ -13,7 +6,9 @@ export default () => (
     className="footer-credit">
       Developed by Donald Herndon, thanks to   
       <a href="https://www.appacademy.io/immersive/course?location=new-york-city">
-        <FontAwesomeIcon icon={faGraduationCap} /> App Academy
+        <img
+        src="https://cabins-seeds.s3.amazonaws.com/58d4d1db-0eca-41d1-aa71-d8e40214ca16-1532545542352.png"
+        alt="app academy"/>
       </a>
     </p>
     <ul className="footer-icons">
