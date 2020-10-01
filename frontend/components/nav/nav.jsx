@@ -44,15 +44,24 @@ class navBase extends React.Component {
   render() {
     return (
       <div className={`nav ${this.props.className}`}>
-        <Link to="/" className="logo-link">
-          <h1>Cabins 'n Dirt</h1>
-        </Link>
-        <nav className="nav-links">
-          <li className="top-links">
-            <Link to="/">Near me</Link>
+        <Link 
+        className="logo-link"
+        to="/" />
+        <nav 
+        className="nav-links">
+          <li 
+          className="top-links">
+            <Link 
+            to="/">
+              Near me
+            </Link>
           </li>
-          <li className="top-links">
-            <Link to="/">About</Link>
+          <li 
+          className="top-links">
+            <Link 
+            to="/">
+              About
+            </Link>
           </li>
           {this.sessionNav()}
         </nav>
