@@ -9,17 +9,40 @@ import Index from './index'
 import Map from './map'
 
 
-export default ({ locations, getLocations }) => (
+export default ({ locations, updateMap }) => (
   <Header
   className="discover"
   headerChildren={<FiltersBar />}>
     <Index
-      locations={locations}
-      getLocations={getLocations} />
-    <Map
+    locations={locations}/>
+    <div
+    className="map-box">
+      <Map
+      updateMap={updateMap}
       locations={locations} />
+    </div>
   </Header>
 )
+
+// export default class Discover extends React.Component {
+//   render() {
+//     debugger;
+//     return (
+//       <Header
+//       className="discover"
+//       headerChildren={<FiltersBar />}>
+//         <Index
+//         locations={this.props.locations} />
+//         <div
+//         className="map-box">
+//           <Map
+//           updateBounds={this.props.updateBounds}
+//           locations={this.props.locations} />
+//         </div>
+//       </Header>
+//     )
+//   }
+// }
 
 //failed functional attempting to useEffect to fetch data
 //caused infinite fetching loop (location is undefined in useEffect?)
