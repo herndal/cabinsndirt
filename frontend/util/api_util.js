@@ -28,13 +28,19 @@ export const demoUser = {
 }
 
 //locations
-export const fetchLocations = () => (
-  $.ajax({
-    url: '/api/locations'
-  })
-)
+export const fetchLocations = filters => {
+  debugger
+  return (
 
-export const fetchLocation = (id) => (
+
+  $.ajax({
+    url: '/api/locations',
+    data: {bounds: filters.bounds}
+  })
+  )
+}
+
+export const fetchLocation = id => (
   $.ajax({
     url: `/api/locations/${id}`
   })

@@ -19,8 +19,8 @@ export const receiveLocation = location => ({
   location
 })
 
-export const getLocations = () => dispatch => (
-  fetchLocations())
+export const getLocations = filters => dispatch => (
+  fetchLocations(filters))
   .then( locs => (
       dispatch(receiveLocations(locs))
     ), err => (

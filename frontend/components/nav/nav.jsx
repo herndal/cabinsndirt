@@ -2,38 +2,40 @@ import React from 'react'
 import { 
   Link 
 } from 'react-router-dom'
+import {
+  SearchBox
+} from '../search/search'
 
 class navBase extends React.Component {
 
   sessionNav(){
     if (!this.props.loggedIn) {
       return (
-        <div className="session-nav">
+        <div 
+        className="session-nav">
           <button
-            className="session-button"
-            onClick={() => this.props.openModal("login")}
-          >
+          className="session-button"
+          onClick={() => this.props.openModal("login")}>
             Log In
           </button>
           <button
-            className="session-button"
-            onClick={() => this.props.openModal("signup")}
-          >
+          className="session-button"
+          onClick={() => this.props.openModal("signup")}>
             Sign Up
           </button>
           <button 
-            className="demo-button"
-            onClick={this.props.demo}
-          >Demo User</button>
+          className="demo-button"
+          onClick={this.props.demo}>
+            Demo User
+          </button>
         </div>
       );
     } else {
       return (
         <div className="session-nav">
           <button
-            className="demo-button"
-            onClick={this.props.logout}
-          >
+          className="demo-button"
+          onClick={this.props.logout}>
             Log Out
           </button>
         </div>
@@ -44,9 +46,17 @@ class navBase extends React.Component {
   render() {
     return (
       <div className={`nav ${this.props.className}`}>
-        <Link 
-        className="logo-link"
-        to="/" />
+        <div
+        className="nav-left">
+          <Link 
+          className="logo-link"
+          to="/" />
+          {
+            this.props.search 
+            ? <SearchBox /> 
+            : ""
+          }
+        </div>
         <nav 
         className="nav-links">
           <li 

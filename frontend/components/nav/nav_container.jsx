@@ -1,3 +1,4 @@
+import React from 'react'
 import { 
   connect 
 } from 'react-redux'
@@ -20,7 +21,8 @@ const stickyMSTP = state => ({
 
 const scrollMSTP = state => ({
   loggedIn: Boolean(state.session.id),
-  className: "scroll-nav"
+  className: "scroll-nav",
+  search: true
 })
 
 const mDTP = dispatch => ({
