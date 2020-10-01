@@ -9,7 +9,13 @@ import {
 
 export default () => (
   <div className="footer">
-    <p className="footer-credit">Developed by Donald Herndon</p>
+    <p 
+    className="footer-credit">
+      Developed by Donald Herndon, thanks to   
+      <a href="https://www.appacademy.io/immersive/course?location=new-york-city">
+        <FontAwesomeIcon icon={faGraduationCap} /> App Academy
+      </a>
+    </p>
     <ul className="footer-icons">
       <li>
         <a href="https://github.com/herndal/cabinsndirt">
@@ -28,9 +34,6 @@ export default () => (
         </a>
       </li>
       <li>
-        <a href="https://www.appacademy.io/immersive/course?location=new-york-city">
-          <FontAwesomeIcon icon={faGraduationCap} />
-        </a>
       </li>
     </ul>
   </div>

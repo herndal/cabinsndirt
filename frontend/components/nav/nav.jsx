@@ -44,7 +44,6 @@ class navBase extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <div className={`nav ${this.props.className}`}>
         <div

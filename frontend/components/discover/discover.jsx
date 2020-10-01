@@ -1,10 +1,25 @@
 import React, {
   useEffect
 } from 'react'
+import {
+  Header
+} from '../shared/blocks'
 import FiltersBar from './filters_bar'
 import Index from './index'
 import Map from './map'
 
+
+export default ({ locations, getLocations }) => (
+  <Header
+  className="discover"
+  headerChildren={<FiltersBar />}>
+    <Index
+      locations={locations}
+      getLocations={getLocations} />
+    <Map
+      locations={locations} />
+  </Header>
+)
 
 //failed functional attempting to useEffect to fetch data
 //caused infinite fetching loop (location is undefined in useEffect?)
@@ -43,17 +58,3 @@ import Map from './map'
 //     )
 //   }
 // }
-
-
-export default ({locations, getLocations}) => (
-  <div
-  className="discover">
-    Discover
-    <FiltersBar />
-    <Index
-    locations={locations}
-    getLocations={getLocations} />
-    <Map 
-    locations={locations}/>
-  </div>
-)
