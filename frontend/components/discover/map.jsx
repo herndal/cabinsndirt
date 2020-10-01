@@ -1,6 +1,7 @@
 import React, {
   useRef
 } from 'react'
+import Pincushion from '../../util/map_util'
 
 // functional component attempting to use useRef hook
 // export default () => {
@@ -13,7 +14,6 @@ import React, {
 //   )
 // }
 
-
 export default class Map extends React.Component {
 
   componentDidMount() {
@@ -21,9 +21,13 @@ export default class Map extends React.Component {
       center: { lat: 37.52822, lng: -77.456493 }, // this is RVA
       zoom: 12
     };
-
-    // wrap this.mapNode in a Google Map
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.Pincushion = new Pincushion(this.map);
+    this.Pincushion.placePins();
+  }
+
+  componentDidUpdate() {
+    this.Pincushion.placePins();
   }
 
   render() {

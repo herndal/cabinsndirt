@@ -53,6 +53,7 @@ export default ({locations, getLocations}) => (
     <Index
     locations={locations}
     getLocations={getLocations} />
-    <Map />
+    <Map 
+    locations={locations}/>
   </div>
 )
