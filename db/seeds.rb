@@ -35,13 +35,15 @@ require 'open-uri'
 
 bryan = Location.new(
   title: "Bryan Park - No Camping!",
-  description: "Spacious park with fields",
+  description: "Stop camping here, please! Don't trust the signs!",
   address: "4308 Hermitage Rd, Richmond, VA 23227",
-  types: "camping",
+  types: "rv",
+  reviews: 20,
+  rating: 78,
   longitude: -77.474441,
   latitude: 37.592800,
   price: 0,
-  capacity: 50
+  capacity: 5
 )
 
 bryan1 = URI.open("http://cabins-seeds.s3.amazonaws.com/bryan_park_1.jpg")
@@ -59,6 +61,31 @@ bryan.photos.attach(io: bryan6, filename: 'bryan_park_6.jpg')
 bryan.photos.attach(io: bryan7, filename: 'bryan_park_7.jpg')
 
 bryan.save!
+
+poca = Location.new(
+  title: "Pocahontas State Park",
+  description: "One of the top three mountain biking destinations of the east coast",
+  address: "10301 State Park Rd, Chesterfield, VA 23832",
+  types: "camping rv cabin",
+  reviews: 843,
+  rating: 12,
+  longitude: -77.3437,
+  latitude: 37.22108,
+  price: 45,
+  capacity: 180
+)
+
+poca1 = URI.open("https://cabins-seeds.s3.amazonaws.com/poca_1.jpg")
+poca2 = URI.open("https://cabins-seeds.s3.amazonaws.com/poca_2.jpg")
+poca3 = URI.open("https://cabins-seeds.s3.amazonaws.com/poca_3.jpg")
+poca4 = URI.open("https://cabins-seeds.s3.amazonaws.com/poca_4.jpg")
+
+poca.photos.attach(io: poca1, filename: 'poca_1.jpg')
+poca.photos.attach(io: poca2, filename: 'poca_2.jpg')
+poca.photos.attach(io: poca3, filename: 'poca_3.jpg')
+poca.photos.attach(io: poca4, filename: 'poca_4.jpg')
+
+poca.save!
 
 # Seeding attachments with AWS:
 # make the bucket public during seeding, and copy URLs for each file:
