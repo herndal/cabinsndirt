@@ -15,7 +15,7 @@ import {
 } from './adventures';
 
 //images
-const campaign1 = "https://hipcamp-res.cloudinary.com/image/upload/q_auto,f_auto,c_thumb,w_1080/v1498456730/campground-photos/yene977lfve4yhhnokuh.jpg";
+const campaign1 = "https://cabins-seeds.s3.amazonaws.com/lee.jpg";
 
 export default () => (
   <div
@@ -25,8 +25,8 @@ export default () => (
     className="splash-body">
       <Campaign
       style={imgStyle(campaign1)}
-      title="Own land? Earn money on Cabins 'n Dirt"
-      subtext="Host our community of good-natured campers, glampers, and RV travelers on your land or at your cabin."/>
+      title="Change your perspective"
+      subtext="Join our growing community of hosts and campers for unique travel experiences."/>
       <AdventureRow
       title={tallRow.title}
       tiles={tallRow.tiles}/>
@@ -37,8 +37,8 @@ export default () => (
 const SplashHeader = () => (
   <Header
   className="splash-header"
-  title="Find yourself outside."
-  subtext="Discover and book tent camping, RV parks, cabins, treehouses, and glamping—everywhere from national parks to blueberry farms.">
+  title="Get lost."
+  subtext="From a riverside cabin to a flat dirt patch, booking a great location for your needs is simpler than ever. Plan a trip today!">
     <HomeSearch/>
   </Header>
 )
@@ -49,6 +49,6 @@ const Campaign = (props) => (
   style={props.style}
   title={props.title}
   subtext={props.subtext}
-  headerChildren={<WhiteButton />}>
+  headerChild={<WhiteButton />}>
   </Header>
 )

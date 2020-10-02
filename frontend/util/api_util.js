@@ -29,7 +29,6 @@ export const demoUser = {
 
 //locations
 export const fetchLocations = filters => {
-  debugger
   return (
 
 

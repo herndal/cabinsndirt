@@ -29,12 +29,12 @@ liza = User.new(
 demo.save!
 liza.save!
 
-
 Location.destroy_all
 
 require 'open-uri'
 
 bryan = Location.new(
+  title: "Bryan Park - No Camping!",
   description: "Spacious park with fields",
   address: "4308 Hermitage Rd, Richmond, VA 23227",
   types: "camping",

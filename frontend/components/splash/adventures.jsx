@@ -30,23 +30,25 @@ export const AdventureRow = ({ title, tiles }) => (
 )
 
 export const tallRow = {
-  title: "Outdoor Experiences.",
+  title: "You've been inside for weeks.",
   tiles: [
     {
       index: 0,
-      title: "Unique Tiny Houses",
-      subtext: "Small & Stylish",
-      photoURL: "https://hipcamp-res.cloudinary.com/images/c_thumb,f_auto,q_60,h_953/v1572899400/campground-photos/hamwjtqwsdqffioglcvq/tiny-house-in-happy-valley-tiny-house-glamping-mountains.jpg"
-    }, {
+      title: "Shred Gnar",
+      subtext: "You must shred gnar",
+      photoURL: "https://cabins-seeds.s3.amazonaws.com/shred-the-gnar.jpg",
+    },
+    {
       index: 1,
-      title: "Animal Experiences",
-      subtext: "Horses, camels, goats & more",
-      photoURL: "https://hipcamp-res.cloudinary.com/images/c_thumb,f_auto,q_60,h_953/v1513711999/campground-photos/jxhpqyakfthq93t8on4x/mudita-camel-s-yurt-camels-and-a-yurt-animal-camel.jpg"
-    }, {
+      title: "Stay Cool",
+      subtext: "Cool your jets",
+      photoURL: "https://cabins-seeds.s3.amazonaws.com/kayak-river.webp",
+    },
+    {
       index: 2,
-      title: "Stunning Sunshine State",
-      subtext: "Colorful camping & glamping",
-      photoURL: "https://hipcamp-res.cloudinary.com/image/upload/c_thumb,f_auto,q_60,h_546/v1583516423/homepage_far_right_vertical_image_stq3nf.jpg"
-    }
-  ]
-}
+      title: "Get Outside",
+      subtext: "Explore in every season",
+      photoURL: "https://cabins-seeds.s3.amazonaws.com/road-trees.jpg",
+    },
+  ],
+};

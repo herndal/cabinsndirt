@@ -1,8 +1,13 @@
 import React from 'react';
 
+export const rand = (int) => Math.floor(Math.random() * int);
+
 export const imgStyle = (url) => {
-  return { backgroundImage: `url(${url})` }
-};
+  return {
+    backgroundImage: `url(${url})`,
+    backgroundSize: "cover",
+  }
+}
 
 const blackPin = "https://cabins-seeds.s3.amazonaws.com/black_pin.svg";
 const greenPin = "https://cabins-seeds.s3.amazonaws.com/green_pin.svg";

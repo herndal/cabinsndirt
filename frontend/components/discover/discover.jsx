@@ -12,7 +12,7 @@ import Map from './map'
 export default ({ locations, updateMap }) => (
   <Header
   className="discover"
-  headerChildren={<FiltersBar />}>
+  headerChild={<FiltersBar />}>
     <Index
     locations={locations}/>
     <div
@@ -30,7 +30,7 @@ export default ({ locations, updateMap }) => (
 //     return (
 //       <Header
 //       className="discover"
-//       headerChildren={<FiltersBar />}>
+//       headerChild={<FiltersBar />}>
 //         <Index
 //         locations={this.props.locations} />
 //         <div

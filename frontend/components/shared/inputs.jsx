@@ -20,6 +20,13 @@ export const WhiteButton = ({ text = "Learn more" }) => (
   </button>
 )
 
+export const InstantBook = () => (
+  <button className="instant-book">
+    <img src="https://cabins-seeds.s3.amazonaws.com/strike-gray.svg" />
+    Instant book
+  </button>
+);
+
 export const SelectSingleCampType = () => (
   <select className="camptype-select fa-select">
     <option value="All Listings">All Listings</option>
