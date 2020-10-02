@@ -50,6 +50,18 @@
   color: $body-text;
 }
 
+.session-errors {
+  background-color: rgb(253, 242, 181);
+}
+
+.session-error {
+  margin: 5px;
+  text-align: center;
+  color: red;
+  border-radius: 3px;
+  display: block;
+}
+
 .session-input {
   font-weight: 600;
   border: 1px solid $logo-gray;

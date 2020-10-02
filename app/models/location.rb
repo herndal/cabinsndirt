@@ -25,7 +25,7 @@ class Location < ApplicationRecord
     #   "southWest"=> {"lat"=>"37.74187", "lng"=>"-122.47791"}
     # }
     Location
-      .select(:id, :description, :address, :types, :longitude, :latitude, :price, :capacity)
+      .select(:id, :title, :description, :address, :types, :longitude, :latitude, :price, :capacity)
       .where(latitude: bounds["southWest"]["lat"]..bounds["northEast"]["lat"])
       .where(longitude: bounds["southWest"]["lng"]..bounds["northEast"]["lng"])
   end

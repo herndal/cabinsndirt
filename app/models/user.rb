@@ -14,10 +14,20 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-  validates :email, :session_token, :password_digest, :fname, :lname, :zipcode, presence: true
-  validates :email, uniqueness: true
-
-  validates :password, length: {minimum: 6}, allow_nil: true
+  validates :session_token, :password_digest, presence: true
+  validates :fname, presence: { message: "Please enter first name" }
+  validates :lname, presence: { message: "Please enter last name" }
+  validates :email, presence: { message: "Email is required" }
+  validates :email, uniqueness: { message: "That email has been taken"}
+  validates :zipcode, presence: { message: "Please enter a zipcode" }
+  validates :password, presence: { message: "Please enter a password" }, on: :create
+  validates :password, length: {
+    minimum: 6,
+    maximum: 72,
+    allow_nil: true,
+    too_short: "Password must be at least 6 characters long",
+    too_long: "Password cannot be longer than 72 characters"
+  }
 
   after_initialize :ensure_session_token
 

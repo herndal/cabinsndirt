@@ -62,7 +62,7 @@ class navBase extends React.Component {
           <li 
           className="top-links">
             <Link 
-            to="/">
+            to="/discover">
               Near me
             </Link>
           </li>

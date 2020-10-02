@@ -44,7 +44,7 @@ export const SearchBox = ({ searchText, setSearchText }) => {
       <input
         className="textfield"
         type="text"
-        placeholder="Try Yosemite, Napa, Moab..."
+        placeholder="Try Huguenot, Texas Beach..."
         value={searchText}
         onChange={e => setSearchText(e.target.value)}
       />

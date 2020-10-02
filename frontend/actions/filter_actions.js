@@ -10,7 +10,6 @@ const updateBounds = (bounds) => ({
 })
 
 export const updateMap = bounds => (dispatch, getState) => {
-  debugger
   dispatch(updateBounds(bounds));
   getLocations(getState().ui.filters)(dispatch);
 }
